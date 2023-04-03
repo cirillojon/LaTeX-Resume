@@ -23,6 +23,8 @@
 \definecolor{primary}{HTML}{2b2b2b} 
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{333333}
+\definecolor{sectiontitlecolor}{HTML}{333333}
+\definecolor{headingsrulecolor}{HTML}{333333}
 
 % Set main fonts
 \defaultfontfeatures{Mapping=tex-text}
@@ -32,26 +34,36 @@
 
 % Name command
 \newcommand{\namesection}[3]{
-	\centering{
-		\sffamily
-		\fontspec[Path = fonts/lato/]{Lato-Hai}\fontsize{40pt}{10cm}\selectfont #1 
-		\fontspec[Path = fonts/lato/]{Lato-Reg}\selectfont #2
-	} \\
-	\vspace{5pt}
-	\centering{ \color{headings}\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #3}
-	\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
-	\vspace{-15pt}
+    \centering{
+        \sffamily
+        \fontspec[Path = fonts/lato/]{Lato-Hai}\fontsize{40pt}{10cm}\selectfont #1 
+        \fontspec[Path = fonts/lato/]{Lato-Reg}\selectfont #2
+    } \\
+    \vspace{5pt}
+    \centering{ \color{headings}\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #3}
+      % \noindent\makebox[\linewidth]{\color{headingsrulecolor}\rule{\textwidth}{0.4pt}}
+    \vspace{-15pt}
 }
 
 \titlespacing{\section}{0pt}{0pt}{0pt}
 
+
 % Headings command
-\titleformat{\section}{\color{headings}
-\scshape\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{} {0em}{}
+\titleformat{\section}{\color{sectiontitlecolor} \scshape\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{}{0em}{}
+
+% Custom section command
+\newcommand{\customsection}[1]{
+  \section{#1}
+  \vspace{-.75\baselineskip}
+  \noindent\makebox[\linewidth]{\color{headingsrulecolor}\rule{\textwidth}{0.4pt}}
+  \vspace{-.5\baselineskip}
+}
+
+
 
 % Subeadings command
 \titleformat{\subsection}{\color{subheadings}
-\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\raggedright\bfseries\uppercase}{}{0em}{}
+\fontspec[Path = fonts/lato/]{Lato-Bol\\}\fontsize{12pt}{12pt}\selectfont\raggedright\bfseries\uppercase}{}{0em}{}
 \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 \newcommand{\runsubsection}[1]{\color{subheadings}
@@ -61,7 +73,7 @@
 \newcommand{\descript}[1]{\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{12pt}\selectfont {#1 \\} \normalfont}
 
 % Location command
-\newcommand{\location}[1]{\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{12pt}\selectfont {#1\\} \normalfont}
+\newcommand{\location}[1]{\color{date}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{12pt}\selectfont {#1 \\} \normalfont}
 
 % Section seperators command
 \newcommand{\sectionsep}[0]{\vspace{8pt}}
