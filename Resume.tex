@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Jonathan Cirillo Resume (As of 4/3/2023)
+% Jonathan Cirillo Resume (As of 4/21/2023)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -31,10 +31,16 @@
 
 
 %%\namesection {Jonathan}{Cirillo}
-\namesection \LARGE {{Jonathan} {Cirillo}}{github.com/cirillojon}
-\vspace{18pt}
+\namesection \LARGE {{Jonathan} {Cirillo}}{\href{https://cirillojon.herokuapp.com/}{cirillojon.herokuapp.com}}
 
-{jonathancirillo@outlook.com | 407.718.1174 | Orlando, FL | linkedin.com/in/jonathan-cirillo/}
+\vspace{18pt}
+\newfontfamily{\FA}{Font Awesome 5 Free}
+
+\newcommand{\linkedin}[1]{\faLinkedin\hspace{0.5em}\href{https://linkedin.com/in/#1}{\texttt{#1}}}
+\newcommand{\github}[1]{\faGithub\hspace{0.5em}\href{https://github.com/#1}{\texttt{#1}}}
+
+% \faEnvelope\ \href{mailto:jonathancirillo@outlook.com}{jonathancirillo@outlook.com} \quad\textbullet\quad \faPhone\ 407.718.1174
+{\FA \faEnvelope} {\href{mailto:jonathancirillo@outlook.com}{jonathancirillo@outlook.com}}\hspace{5pt}|\hspace{5pt}{\FA \faPhone} 407.718.1174 |\hspace{5pt} {\FA \faLinkedin} {\href{https://linkedin.com/in/jonathan-cirillo/}{linkedin}} \hspace{5pt}|\hspace{5pt} {\FA \faGithub} {\href{https://github.com/cirillojon}{github}}
 
 \customsection{Education}
 
@@ -49,14 +55,9 @@
 
 \customsection{Experience}
 
-\runsubsection{F5 Networks}
-\descript{| Software Engineer }
-\location{Incoming Aug 2023 | Seattle, WA}
-\vspace{\topsep} 
-
 \runsubsection{VS \& Co.}
 \descript{| Credit/Payments Applications Developer Intern }
-\location{Aug 2022 – Aug 2023 | Remote}
+\location{Aug 2022 – Present | Remote}
 \begin{tightemize}
 \item A part of team responsible for investigating 100\% of software issues affecting store registers \& pin-pads.
 \item Employ PowerShell scripts to process logs \& investigate root causes of bugs affecting millions of customers.
@@ -95,10 +96,10 @@ sent to all stores.
 
 \runsubsection{Augmented Reality Cooking Simulator (Cutting Board)}
 \descript{ |  2023 }
-\descript{Unity, C\#, Firebase, Figma, SpoonacularAPI}
+\descript{Unity, C\#, Python, Firebase, Blender, Figma, SpoonacularAPI \hfill \href{https://arcuttingboard.com/}{Link to Website}}
 \begin{tightemize}
-\item Member of startup; Part of pitching team for UCF Joust Competition for Student Entrepreneurs. 
-\item Currently also working as a backend developer, responsible for API and database integration. 
+\item Early member of startup; Part of pitching team for UCF Joust Competition for Student Entrepreneurs. 
+\item Currently also working as a lead backend developer, responsible for API and database integration. 
 \item Developed API calls to fetch recipe information, seamlessly integrating data into the application.
 \item Integrated Firebase with Unity, using cloud-storage to securely host 3D assets and user account information.
 \item Implemented GLTFUtility plugin to instantiate 3D models into Unity app during runtime from cloud-storage.
@@ -107,17 +108,26 @@ sent to all stores.
 
 \runsubsection{Java Chess Engine \& Multi-threaded AI}
 \descript{ |  2023 }
+\descript{ Java, LaTeX, IntelliJ, Guava \hfill \href{https://cirillojon.herokuapp.com/images/Final-Paper.pdf}{Link to Paper}}
 \begin{tightemize}
 \item Developed a robust Java-based chess engine with a multi-threaded AI using alpha-beta-pruning. 
 \item Conducted research \& presented results detailing runtime improvements made by parallelizing alpha-beta.
 \end{tightemize}
 \sectionsep
 
-\runsubsection{Spotify Web/Mobile Application}
-\descript{|  2022}
-\descript{MongoDB, Express, React, and Node.js } 
+\runsubsection{Mini-games Web app}
+\descript{|  2023}
+\descript{React.js, Unity, JavaScript, C\#, AWS Lambda, ThreeJS \hfill \href{https://react-app-sandbox.netlify.app/}{Link to Project}} 
 \begin{tightemize}
-\item Led the development of a Spotify web and mobile application called ‘Trendify’. 
+\item Created app using React filled with various minigames, inlcuding: snake, tic-tac-toe, \& a Unity WebGL game.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Spotify Web/Mobile Application}
+\descript{| 2022}
+\descript{MongoDB, Express, React.js, Node.js \hfill \href{https://trendify-project.herokuapp.com/}{Link to Project}}
+\begin{tightemize}
+\item Led the development of a Spotify web and mobile application called ‘Trendify’
 \item Utilized Spotify’s API to allow users to connect their account and view in-depth listening data \& track information. Other technology used: Jest, React Native, Android Studio, Expo, Lucidchart, and Heroku.
 \end{tightemize}
 
@@ -136,7 +146,6 @@ sent to all stores.
 React.js \textbullet{} Node.js \textbullet{} Pandas \textbullet{}
 Keras \textbullet{} .NET \textbullet{} Unity \textbullet{} VS Code \textbullet{} IntelliJ }
 \sectionsep\
-
 
 \hfill
 \end{document}  \documentclass[]{article}
