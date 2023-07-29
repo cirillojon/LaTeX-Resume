@@ -20,12 +20,12 @@
 \usepackage{fontawesome5}
 
 % Color definitions
-\definecolor{date}{HTML}{666666} 
-\definecolor{primary}{HTML}{2b2b2b} 
-\definecolor{headings}{HTML}{6A6A6A}
-\definecolor{subheadings}{HTML}{333333}
-\definecolor{sectiontitlecolor}{HTML}{333333}
-\definecolor{headingsrulecolor}{HTML}{333333}
+\definecolor{date}{HTML}{1a1a1a} 
+\definecolor{primary}{HTML}{1a1a1a}
+\definecolor{headings}{HTML}{1a1a1a}
+\definecolor{subheadings}{HTML}{1a1a1a}
+\definecolor{sectiontitlecolor}{HTML}{1a1a1a}
+\definecolor{headingsrulecolor}{HTML}{1a1a1a}
 
 % Set main fonts
 \defaultfontfeatures{Mapping=tex-text}
@@ -68,10 +68,11 @@
 \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 \newcommand{\runsubsection}[1]{\color{subheadings}
-\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries {#1} \normalfont}
 
 % Descriptors command
-\newcommand{\descript}[1]{\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{12pt}\selectfont {#1 \\} \normalfont}
+\newcommand{\descript}[1]{\color{subheadings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{12pt}\selectfont {#1 \\} \normalfont}
+
 
 % Location command
 \newcommand{\location}[1]{\color{date}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{12pt}\selectfont {#1 \\} \normalfont}
